@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account — Nexus</title>
+
+  <!-- Google Fonts: Inter (UI) + Playfair Display (brand mark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome — eye icon + supporting icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Page-specific stylesheet -->
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+
+
+  <div class="bg-orb bg-orb--1" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb--2" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb--3" aria-hidden="true"></div>
+
+
+  <main class="page-center">
+    <article class="auth-card">
+
+      <!-- Brand + headings -->
+      <header class="auth-card__header">
+        <div class="brand" aria-label="Nexus">
+          <span class="brand__mark">N</span>
+          <span class="brand__name">Nexus</span>
+        </div>
+        <h1 class="auth-card__title">Register Form</h1>
+        <p class="auth-card__subtitle">Start your journey — it only takes a moment.</p>
+      </header>
+
+      <!-- Registration form -->
+      <form class="auth-form" id="registerForm">
+
+        <!-- Email -->
+        <div class="field-group">
+          <label class="field-group__label" for="reg-email">Email address</label>
+          <div class="field-group__input-wrap">
+            <span class="field-group__icon" aria-hidden="true">
+              <i class="fa-regular fa-envelope"></i>
+            </span>
+            <input
+              class="field-group__input"
+              type="email"
+              id="reg-email"
+              name="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="field-group">
+          <label class="field-group__label" for="reg-password">Password</label>
+          <div class="field-group__input-wrap">
+            <span class="field-group__icon" aria-hidden="true">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+            <input
+              class="field-group__input field-group__input--padded-right"
+              type="password"
+              id="reg-password"
+              name="password"
+              placeholder="Create a strong password"
+              autocomplete="new-password"
+              required
+            />
+            <!-- Eye icon — UI only, no JavaScript -->
+            <span class="field-group__eye" aria-hidden="true" title="Toggle visibility">
+              <i class="fa-regular fa-eye"></i>
+            </span>
+          </div>
+          <p class="field-group__hint">Use 8+ characters with letters, numbers &amp; symbols.</p>
+        </div>
+
+        <!-- Submit -->
+        <button class="btn-primary" type="submit">
+          <span class="btn-primary__text">Create Account</span>
+          <span class="btn-primary__arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </button>
+
+      </form>
+
+      <!-- Navigation link -->
+      <p class="auth-card__footer">
+        Already have an account?
+        <a class="auth-link" href="../index.html">Login</a>
+      </p>
+
+    </article>
+  </main>
+  <script type="module" src="register.js"></script>
+</body>
+</html>

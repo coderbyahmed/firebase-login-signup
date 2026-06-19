@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — Nexus</title>
+
+  <!-- Google Fonts: Inter (UI) + Playfair Display (brand mark) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome — eye icon + supporting icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Page-specific stylesheet -->
+  <link rel="stylesheet" href="login/login.css" />
+</head>
+<body>
+
+  <!-- Decorative ambient orbs (pure CSS animation) -->
+  <div class="bg-orb bg-orb--1" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb--2" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb--3" aria-hidden="true"></div>
+
+  <!-- ===== Page centre ===== -->
+  <main class="page-center">
+    <article class="auth-card">
+
+      <!-- Brand + headings -->
+      <header class="auth-card__header">
+        <div class="brand" aria-label="Nexus">
+          <span class="brand__mark">N</span>
+          <span class="brand__name">Nexus</span>
+        </div>
+        <h1 class="auth-card__title">Login Form</h1>
+        <p class="auth-card__subtitle">Sign in to continue to your dashboard.</p>
+      </header>
+
+      <!-- Login form -->
+      <form class="auth-form" id="loginForm">
+
+        <!-- Email -->
+        <div class="field-group">
+          <label class="field-group__label" for="log-email">Email address</label>
+          <div class="field-group__input-wrap">
+            <span class="field-group__icon" aria-hidden="true">
+              <i class="fa-regular fa-envelope"></i>
+            </span>
+            <input
+              class="field-group__input"
+              type="email"
+              id="log-email"
+              name="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="field-group">
+          <div class="field-group__label-row">
+            <label class="field-group__label" for="log-password">Password</label>
+            <!-- Forgot password — UI only -->
+            <a class="field-group__forgot" href="forgot/forgot-password.html">Forgot password?</a>
+          </div>
+          <div class="field-group__input-wrap">
+            <span class="field-group__icon" aria-hidden="true">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+            <input
+              class="field-group__input field-group__input--padded-right"
+              type="password"
+              id="log-password"
+              name="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            />
+            <!-- Eye icon — UI only, no JavaScript -->
+            <span class="field-group__eye" aria-hidden="true" title="Toggle visibility">
+              <i class="fa-regular fa-eye"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button class="btn-primary" type="submit" value="submit">
+          <span class="btn-primary__text">Sign In</span>
+          <span class="btn-primary__arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </button>
+
+      </form>
+
+      <!-- Navigation link -->
+      <p class="auth-card__footer">
+        Don't have an account?
+        <a class="auth-link" href="singup/register.html">Register</a>
+      </p>
+
+    </article>
+  </main>
+  <script type="module" src="login/login.js"></script>
+</body>
+</html>

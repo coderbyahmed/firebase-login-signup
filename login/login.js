@@ -21,7 +21,7 @@ loginForm.addEventListener("submit", (e) => {
         .then(() => {
             showToast("Login Successful", "success");
             setTimeout(() => {
-                window.location.href = "../dashboard/home.html";
+                window.location.href = "dashboard/home.html";
             }, 1000);
         })
 
